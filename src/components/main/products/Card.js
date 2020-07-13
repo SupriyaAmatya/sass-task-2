@@ -1,14 +1,18 @@
 import React from 'react'
+import SvgIcons from '../../SvgIcons'
 
 const Card = ({
-	imgSrc,
-	title,
-	body
+  name="",
+  size="",
+  color="",
+	title="",
+	body=""
 }) => {
 	return (
 		<div className="card  mb-27x">
-			<div className={`card__image card__image--${imgSrc}`}>
-			</div>
+			<div className="card__image">
+        <SvgIcons name={name} width={size} height={size} fill={color} />
+      </div>
 			<div className="card__content mt-10x">
 				<h4 className="card__title">
           {title}

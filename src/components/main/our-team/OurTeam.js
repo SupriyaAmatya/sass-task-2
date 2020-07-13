@@ -1,9 +1,12 @@
 import React from 'react'
 import OurTeamCard from './OurTeamCard'
+import team1 from '../../../assets/images/team-1.svg'
+import team2 from '../../../assets/images/team-2.svg'
+import team3 from '../../../assets/images/team-3.svg'
 
 const membersDetails = [
  {
-    imgSrc: 'team-1',
+    imgSrc: team1,
     name: 'Gigi Hadid',
     profession: 'Model',
     about: 'You can write here details about one of your team members. You can give more details about what they do.Feel free to add some links for people to be able to follow them outside the site.',
@@ -16,7 +19,7 @@ const membersDetails = [
   },
 
   {
-    imgSrc: 'team-2',
+    imgSrc: team2,
     name: 'Christian Louboutin',
     profession: 'Designer',
     about: 'You can write here details about one of your team members. You can give more details about what they do.Feel free to add some links for people to be able to follow them outside the site.',
@@ -27,7 +30,7 @@ const membersDetails = [
   },
 
   {
-    imgSrc: 'team-3',
+    imgSrc: team3,
     name: 'Kendal Jenner',
     profession: 'Model',
     about: 'You can write here details about one of your team members. You can give more details about what they do.Feel free to add some links for people to be able to follow them outside the site.',

@@ -18,7 +18,9 @@ const Product = () => {
         <div className="row">
           <div className="col col-4-lg ">
             <Card
-              imgSrc="feature-1"
+              name='chat'
+              size='70'
+              color="#00ACC1"
               title="First Feature"
               body="Divide details about your product or agency work into 
                 parts. Write a few lines about each one. A paragraph 
@@ -27,7 +29,9 @@ const Product = () => {
           </div>
           <div className="col col-4-lg">
           <Card
-              imgSrc="feature-2"
+              name='verified-user'
+              size='70'
+              color="#4CAF50"
               title="Second Feature"
               body="Divide details about your product or agency work into 
                 parts. Write a few lines about each one. A paragraph 
@@ -36,7 +40,9 @@ const Product = () => {
           </div>
           <div className="col col-4-lg">
           <Card
-              imgSrc="feature-3"
+              name='fingerprint'
+              size='70'
+              color="#F55A4E"
               title="Third Feature"
               body="Divide details about your product or agency work into 
                 parts. Write a few lines about each one. A paragraph 

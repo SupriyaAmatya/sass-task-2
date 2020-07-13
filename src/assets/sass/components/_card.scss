@@ -4,12 +4,10 @@
   text-align: center;
 
   @include e(image) {
-    width : 70px;
-    height: 70px;
     margin: 0 auto;
 
     // setting background image for card.
-    @include cardImage(feature-1, feature-2, feature-3);
+    // @include cardImage(feature-1, feature-2, feature-3);
   }
 
   @include e(title) {
@@ -20,6 +18,7 @@
     display      : inline-block;
     color        : getColor('grey.base');
     margin-bottom: getSpacing('3x');
+    font-weight: 500;
   }
 
   @include e(body) {
@@ -32,9 +31,10 @@
   @include m(team) {
     .card__image {
       width : 170px;
-      height: 170px;
-      margin: 0 auto;
-      @include cardImage(team-1, team-2, team-3);
+      height: 150px;
+       img{
+         object-fit: cover;
+       }
     }
   }
 }

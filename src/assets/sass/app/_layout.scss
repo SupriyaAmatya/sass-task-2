@@ -1,108 +1,80 @@
-.container {
-	width  : 100%;
-	margin : 0 auto;
-	padding: getSpacing('3x')+.1875rem;
+.header-wrapper {
+  width     : 100%;
+  max-height: 726px;
+  height    : 100vh;
+  color     : $white;
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)), url(../../images/background.png);
 
-	@include m(navbar) {
-		padding       : getSpacing('5x');
-		flex-direction: column;
+  background-repeat  : no-repeat;
+  background-size    : cover;
+  background-position: center center;
+  display            : flex;
+  @include transition;
 
-		@include mq(md) {
-			flex-direction: row;
-		}
-	}
-
-	@include m(hero) {
-		margin-top: getSpacing('12x');
-
-		.btn {
-			margin-top: getSpacing('9x');
-		}
-
-		.hero {
-			max-width: 594px;
-
-			@include mq(xl) {
-				margin-top: getSpacing('15x');
-			}
-		}
-
-		@media only screen and (max-width: 320px) {
-			margin-top: getSpacing('4x');
-
-			h1 {
-				font-size  : 48px;
-				line-height: 57px;
-			}
-
-			p {
-				font-size  : 16px;
-				line-height: 26px;
-			}
-		}
-	}
-
-	@include mq(sm) {
-		max-width: 556px;
-	}
-
-	@include mq(md) {
-		max-width: 748px;
-	}
-
-	@include mq(lg) {
-		max-width: 972px;
-	}
-
-	@include mq(xl) {
-		max-width: 1140px;
-	}
+  @include mq(xl) {
+    height: 100vh;
+  }
 }
 
-.nav {
-	display: none;
-
-	@include e(item) {
-		margin-left   : 30px;
-		text-transform: uppercase;
-
-		@include m(icon) {
-			a {
-				@include flexCenter(row);
-
-				span {
-					margin-right: 5px;
-				}
-			}
-		}
-	}
-
-	@include m(footer) {
-		@include flexCenter(row);
-		justify-content: flex-start;
-	}
-
-	@include mq(md) {
-		@include flexCenter(row);
-		justify-content: flex-start;
-	}
+.main-wrapper {
+  margin-top      : -60px;
+  margin-left     : auto;
+  margin-right    : auto;
+  margin-bottom   : 33px;
+  max-width       : 95%;
+  background-color: $white;
+  box-shadow      : 0px 2px 24px rgba(0, 0, 0, 0.14), 0px 8px 10px rgba(0, 0, 0, 0.2);
+  border-radius   : 6px;
 }
 
-.socials {
-	display  : flex;
-	font-size: 18px;
+.section {
+  width     : 100%;
+  text-align: center;
+  margin-top: getSpacing('24x');
 
-	@include e(item) {
-		margin-right: 24px;
-	}
+  @include e(title) {
+    color: $heading-text-color;
+  }
 
-	@include m(team) {
-		align-self     : center;
-		justify-content: center;
-		margin-top     : getSpacing('8x');
+  @include e(body) {
+    max-width: 753px;
+  }
 
-		a:hover {
-			color: darken($color: #000000, $amount: 10);
-		}
-	}
+  @include e(card) {
+    margin-top: getSpacing('40x');
+  }
+
+}
+
+.footer-wrapper {
+  width: 100%;
+
+  .container--footer {
+    @include flexCenter(column);
+    padding-bottom: getSpacing('6x');
+
+    .nav--footer {
+      margin-bottom: getSpacing('7x');
+
+      .nav__item {
+        font-weight: 500;
+      }
+
+      a {
+        color: getColor('black.light');
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+
+    @include mq(lg) {
+      flex-direction : row;
+      justify-content: space-between;
+    }
+  }
+
 }

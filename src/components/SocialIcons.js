@@ -2,30 +2,29 @@ import React from 'react';
 
 import { IoLogoFacebook, IoLogoTwitter, IoLogoInstagram, IoLogoLinkedin, IoLogoGoogleplus, IoLogoYoutube } from 'react-icons/io';
 
-const IconSize = '18px';
-const IconColor = '#999999';
+const IconSize = '20px';
 
 const SocialIcons = (props) => {
   const { iconName } = props;
 
   switch (iconName) {
     case 'facebook':
-      return <IoLogoFacebook size={IconSize} color={IconColor} />;
+      return <IoLogoFacebook size={IconSize} />;
 
     case 'twitter':
-      return <IoLogoTwitter size={IconSize} color={IconColor}/>;
+      return <IoLogoTwitter size={IconSize}/>;
 
     case 'instagram':
-      return <IoLogoInstagram size={IconSize} color={IconColor}/>;
+      return <IoLogoInstagram size={IconSize}/>;
 
     case 'linkedin':
-      return <IoLogoLinkedin size={IconSize} color={IconColor}/>;
+      return <IoLogoLinkedin size={IconSize}/>;
 
     case 'google':
-      return <IoLogoGoogleplus size={IconSize} color={IconColor}/>;
+      return <IoLogoGoogleplus size={IconSize}/>;
 
     case 'youtube':
-      return <IoLogoYoutube size={IconSize} color={IconColor}/>;
+      return <IoLogoYoutube size={IconSize}/>;
 
     default:
       return;

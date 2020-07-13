@@ -1,7 +1,7 @@
 .contact-form {
   max-width    : 753px;
   margin       : 0 auto;
-  margin-top   : getSpacing('12x');
+  margin-top   : getSpacing('9x');
   margin-bottom: getSpacing('19x');
   padding      : 10px;
   @include transition;
@@ -54,11 +54,11 @@
       box-sizing      : border-box;
       border-bottom   : 1px solid #B4B4BB;
       padding         : 16px 0;
+      transition      : box-shadow 0.3s ease-in-out;
 
       &:focus,
       &:valid {
-        border-color: getColor('primary.base');
-        border-width: 2px;
+        box-shadow: 0px -2px getColor('primary.base') inset;
 
         ~label {
           left     : 0;
@@ -67,6 +67,12 @@
           font-size: 12px;
         }
       }
+    }
+  }
+
+  @include e(btn) {
+    button {
+      font-weight: 500;
     }
   }
 }
