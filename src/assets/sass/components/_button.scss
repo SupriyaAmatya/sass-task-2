@@ -1,0 +1,40 @@
+.btn {
+  border        : 1px solid transparent;
+  outline       : 0;
+  border-radius : 3px;
+  text-transform: uppercase;
+  transition    : all .3s ease;
+  cursor        : pointer;
+
+  // button styles
+  &--primary {
+    background-color: getColor('primary.base');
+    color           : $white;
+    box-shadow      : 0px 2px 2px getColor('primary.shadow');
+
+    &:hover {
+      background-color: getColor('primary.dark');
+    }
+  }
+
+  &--error {
+    background-color: getColor('danger.base');
+    color           : $white;
+    box-shadow      : 0px 2px 2px getColor('danger.shadow');
+
+    &:hover {
+      background-color: getColor('danger.dark');
+    }
+  }
+
+  // button sizes
+  &--regular {
+    @include getFontSize('small');
+    padding: getSpacing('3x') getSpacing('8x');
+  }
+
+  &--large {
+    @include getFontSize('body2');
+    padding: getSpacing('4x')+.125rem getSpacing('9x');
+  }
+}

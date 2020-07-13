@@ -1,0 +1,72 @@
+.contact-form {
+  max-width    : 753px;
+  margin       : 0 auto;
+  margin-top   : getSpacing('12x');
+  margin-bottom: getSpacing('19x');
+  padding      : 10px;
+  @include transition;
+  @include flexCenter(column);
+
+  @include e(user-info) {
+    width: 100%;
+    @include flexCenter(column);
+
+    @include mq(lg) {
+      flex-direction : row;
+      justify-content: space-between;
+
+      .contact-form__group {
+        width: 90%;
+
+        &:last-child() {
+          margin-left: getSpacing('7x');
+        }
+      }
+    }
+  }
+
+  @include e(group) {
+    width        : 100%;
+    position     : relative;
+    margin-bottom: getSpacing('5x');
+
+    label {
+      position      : absolute;
+      top           : 25px;
+      left          : 0;
+      pointer-events: none;
+      color         : getColor('white.dark');
+      @include transition;
+    }
+
+    textarea {
+      height       : 100px;
+      margin-bottom: getSpacing('4x');
+    }
+
+    input,
+    textarea {
+      box-shadow      : none;
+      outline         : none;
+      border          : none;
+      background-color: $white;
+      width           : 100%;
+      box-sizing      : border-box;
+      border-bottom   : 1px solid #B4B4BB;
+      padding         : 16px 0;
+
+      &:focus,
+      &:valid {
+        border-color: getColor('primary.base');
+        border-width: 2px;
+
+        ~label {
+          left     : 0;
+          top      : -14px;
+          color    : getColor('primary.base');
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.container {
+	width  : 100%;
+	margin : 0 auto;
+	padding: getSpacing('3x')+.1875rem;
+
+	@include m(navbar) {
+		padding       : getSpacing('5x');
+		flex-direction: column;
+
+		@include mq(md) {
+			flex-direction: row;
+		}
+	}
+
+	@include m(hero) {
+		margin-top: getSpacing('12x');
+
+		.btn {
+			margin-top: getSpacing('9x');
+		}
+
+		.hero {
+			max-width: 594px;
+
+			@include mq(xl) {
+				margin-top: getSpacing('15x');
+			}
+		}
+
+		@media only screen and (max-width: 320px) {
+			margin-top: getSpacing('4x');
+
+			h1 {
+				font-size  : 48px;
+				line-height: 57px;
+			}
+
+			p {
+				font-size  : 16px;
+				line-height: 26px;
+			}
+		}
+	}
+
+	@include mq(sm) {
+		max-width: 556px;
+	}
+
+	@include mq(md) {
+		max-width: 748px;
+	}
+
+	@include mq(lg) {
+		max-width: 972px;
+	}
+
+	@include mq(xl) {
+		max-width: 1140px;
+	}
+}
+
+.nav {
+	display: none;
+
+	@include e(item) {
+		margin-left   : 30px;
+		text-transform: uppercase;
+
+		@include m(icon) {
+			a {
+				@include flexCenter(row);
+
+				span {
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+
+	@include m(footer) {
+		@include flexCenter(row);
+		justify-content: flex-start;
+	}
+
+	@include mq(md) {
+		@include flexCenter(row);
+		justify-content: flex-start;
+	}
+}
+
+.socials {
+	display  : flex;
+	font-size: 18px;
+
+	@include e(item) {
+		margin-right: 24px;
+	}
+
+	@include m(team) {
+		align-self     : center;
+		justify-content: center;
+		margin-top     : getSpacing('8x');
+
+		a:hover {
+			color: darken($color: #000000, $amount: 10);
+		}
+	}
+}
