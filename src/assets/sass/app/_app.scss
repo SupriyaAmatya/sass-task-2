@@ -4,7 +4,7 @@
   padding: getSpacing('3x')+.1875rem;
 
   @include m(navbar) {
-    padding       : getSpacing('5x');
+    padding       : getSpacing('4x');
     flex-direction: column;
 
     @include mq(md) {
@@ -92,7 +92,8 @@
   .responsive-bar {
     position: absolute;
     right   : 15px;
-    top     : 28%;
+    top     : 50%;
+    transform: translateY(-50%);
     cursor  : pointer;
     @include transition;
 

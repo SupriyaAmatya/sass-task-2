@@ -1,6 +1,5 @@
 import React from 'react'
 import { IoMdHeart } from 'react-icons/io';
-import { MdCopyright } from 'react-icons/md';
 
 const Footer = () => {
   return (
